@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Posts from "./components/Posts.js"
+import Posts from "./components/Posts.js";
+import Explanation from "./components/explanation";
 import axios from 'axios'
 import "./App.css";
 //import src from "*.svg";
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <Posts nasaVid={data.url} title={data.title} />
+      <Explanation vidDesc={data.explanation} />
     </div>
   );
 }
